@@ -14,10 +14,8 @@
 
             // Function to extract the transaction hash ID from the URL
             const getTransactionId = () => {
-                const path = window.location.pathname;
-                // Assuming the URL pattern is /transaction/hashID
-                const match = path.match(/\/transaction\/(.*)$/);
-                return match ? match[1] : null;
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get('hash'); // Get the hash value from URL query parameters
             };
 
             // Function to perform redirection
