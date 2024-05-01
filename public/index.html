@@ -6,44 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const userAgent = navigator.userAgent;
-            const appStoreURL = 'https://apps.apple.com/us/app/example-app/id1234567890';
-            const playStoreURL = 'https://play.google.com/store/apps/details?id=com.example.app';
-
-            // Function to extract the transaction hash ID from the URL
-            const getTransactionId = () => {
-                const path = window.location.pathname;
-                // Assuming the URL pattern is /transaction/hashID
-                const match = path.match(/\/transaction\/(.*)$/);
-                return match ? match[1] : null;
-            };
-
-            // Function to perform redirection
-            const redirectTo = (url) => {
-                window.location = url;
-            };
-
-            const transactionId = getTransactionId();
-
-            if (!transactionId) {
-                console.error("Transaction ID is missing from the URL.");
-                return;
-            }
-
-            const deepLinkURL = `passkeyappv2://transaction/${transactionId}`;
-
-            // Checking the platform and redirecting to the store if needed
-            if (/iPad|iPhone|iPod/.test(userAgent)) {
-                redirectTo(appStoreURL);
-            } else if (/Android/.test(userAgent)) {
-                redirectTo(playStoreURL);
-            }
-
-            // Delay redirecting to the app with an arrow function
-            setTimeout(() => redirectTo(deepLinkURL), 25);
-        });
-    </script>
+    <h1>L Bank</h1>
 </body>
 </html>
