@@ -3,12 +3,12 @@
     "apps": [],
     "details": [
         {
-            "appIDs": ["6YJMXB2FR4.us.myfluff.reinstestv2"],
+            "appIDs": ["6YJMXB2FR4.us.myfluff.reinstest"],
             "paths": [ "*" ]
         }
     ]
 },
   "webcredentials": {
-    "apps": ["6YJMXB2FR4.us.myfluff.reinstestv2"]
+    "apps": ["6YJMXB2FR4.us.myfluff.reinstest"]
   }
 }
